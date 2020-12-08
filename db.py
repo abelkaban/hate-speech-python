@@ -71,9 +71,9 @@ class DB:
             self.mycursor.execute(query, valuesPos)
 
             n11     = mi[row]['negatif']['total']
-            n01     = (totalPos - mi[row]['negatif']['total'])
+            n01     = (totalNeg - mi[row]['negatif']['total'])
             n10     = mi[row]['positif']['total']
-            n00     = (totalNeg - mi[row]['positif']['total'])
+            n00     = (totalPos - mi[row]['positif']['total'])
             n1_     = n10+n11
             n1      = n01+n11
             n0_     = n01+n00
