@@ -123,8 +123,8 @@ class DB:
                 tPos += 0
                 tNeg += 0
             else:
-                vPos = res[3] / (res[3] + res[2]) if res[3] > 0 else 0
-                vNeg = res[2] / (res[3] + res[2]) if res[2] > 0 else 0
+                vPos = res[4] / res[6] if res[6] > 0 else 0
+                vNeg = res[5] / res[6] if res[6] > 0 else 0
                 pPos.append(vPos)
                 pNeg.append(vNeg)
 
