@@ -68,8 +68,8 @@ class DB:
             finalMI = r+s+t+u
 
             dfTotal     = (mi[row]['positif']['df'] + mi[row]['negatif']['df'])
-            valuesPos   = (row, mi[row]['negatif']['total'], mi[row]['positif']['total'], mi[row]['total'], mi[row]['positif']['df'], mi[row]['negatif']['df'], dfTotal, n11, n01, n10, n00, finalMI)
-            self.mycursor.execute(query, valuesPos)
+            valuesMI   = (row, mi[row]['negatif']['total'], mi[row]['positif']['total'], mi[row]['total'], mi[row]['positif']['df'], mi[row]['negatif']['df'], dfTotal, n11pos, n01pos, n10pos, n00pos, finalMI)
+            self.mycursor.execute(query, valuesMI)
 
             self.mydb.commit()
 
